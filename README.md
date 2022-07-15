@@ -6,7 +6,10 @@ Then you can add new methods to the various [genbank](https://github.com/depreka
 will allow you to add more functionality to your own code.
 
 
-An example is adding a foo method to the Locus object:
+An example is:
+
+adding a foo method to the Locus object, by creating a mock locus.py file that imports the genbank.locus and
+then adds the new foo method
 ```
 from genbank.locus import Locus
 from genbank_template.feature import Feature
@@ -16,7 +19,8 @@ class Locus(Locus, feature=Feature):
 		return 'bar'
 ```
 
-or adding a foo method to the Feature object:
+or adding a foo method to the Feature object, by creating a mock feature.py file that imports the genbank.feature and
+then adds the new foo method
 ```
 from genbank.feature import Feature
 class Feature(Feature):
